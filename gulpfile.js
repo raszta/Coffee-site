@@ -10,11 +10,11 @@ var notifier = require('node-notifier');
 function showError(err) {
 
   notifier.notify({
-    title: 'Masz wielki błąd popraw go natychmiast!',
+    title: 'Error',
     message: err.messageFormatted
   });
 
-  console.log( c.red('==================') );
+  console.log(c.red('Masz wielki błąd popraw go natychmiast!') );
   console.log( c.red(err.messageFormatted) );
   console.log( c.red('==================') );
   this.emit('end');
