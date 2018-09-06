@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+   font-family: 'Cookie', cursive;
 
     @media screen and(max-width:768px){
         background: url('../../img/headerBcg.jpeg') center/cover fixed no-repeat;       
@@ -81,9 +82,15 @@
          top: 0;
          left: 0;
          height: 100%;
-         width: 10rem;
+         width: 0;
+         transition: all 0.5s linear;
+         overflow: hidden;
          background: rgba(242,180,80,0.8);
          z-index: 3;
+     }
+
+     .nav--show{
+         width:10rem;
      }
 
      .nav__links{
@@ -143,11 +150,8 @@
         width:50%;
         border-radius: 0.5rem;
         }
-    }
+    }   
 }
-
-
-
 
 @keyframes pulse{
     0%{

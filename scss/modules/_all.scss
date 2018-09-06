@@ -1,13 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i&subset=latin-ext');
-
+@import url('https://fonts.googleapis.com/css?family=Cookie');
 *{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
-    font-family: 'Arimo';
+    padding: 0;    
 }
-
-
 
 :root{
     --brightYellow: #E3b505;
@@ -21,4 +18,5 @@
 body{
     color: var(--black);
    background: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)),url('../img/bodyBcg.jpeg');
+   font-family: 'Arimo';
 }

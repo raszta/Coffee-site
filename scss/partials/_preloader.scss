@@ -1,0 +1,17 @@
+.preloader{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--grey);
+        z-index: 999;
+        display:grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .preloader__item{
+        height: 45rem;
+        width: 45rem;
+    }
