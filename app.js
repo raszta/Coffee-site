@@ -93,3 +93,31 @@ function clearField(){
     document.querySelector('.input-lastname').value = '';
     document.querySelector('.input-email').value = '';
 }
+
+//modal
+const links = document.querySelectorAll('.work-item__icon');
+links.forEach(function(el){
+    el.addEventListener('click', function(event){
+        showModal(event);
+    });
+});
+//display modal
+function showModal(e){
+    e.preventDefault();
+    if (e.target.parentElement.classList.contains('work-item__icon')){
+        let id = e.target.parentElement.dataset.id;
+        const modal = document.querySelector('.work-modal');
+        const modalItem = document.querySelector('.work-modal__item');
+
+        modal.classList.add('work-modal--show');
+        modalItem.style.backgroundImage = `url(img/work-${id}.jpeg)`;
+   }
+}
+
+document.querySelector('.work-modal__close').addEventListener('click', function(e){
+    hideModal(e);
+});
+
+function hideModal(e){
+    document.querySelector('.work-modal').classList.remove('work-modal--show');
+}
