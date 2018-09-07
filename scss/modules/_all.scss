@@ -47,6 +47,9 @@ body{
 .section-title{
     padding: 1rem 0.5rem;    
 }
+.section-title--left{
+    margin-left:10rem;
+}
 
 .section-title__name{
     font-size: 4rem;
@@ -57,7 +60,7 @@ body{
 .section-title__underline{
     background: var(--yellow);
     width: 6rem;
-    height:0.25rem;
+    height:0.4rem;
 }
 .section-title__text{
     letter-spacing: 0.1rem;
