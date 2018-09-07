@@ -20,3 +20,48 @@ body{
    background: linear-gradient(rgba(255,255,255,0.75),rgba(255,255,255,0.75)),url('../img/bodyBcg.jpeg');
    font-family: 'Arimo';
 }
+
+.section-padding{
+    padding:3rem 0;
+}
+
+.grid-container{
+    max-width: 90vw;
+    margin:2rem auto;
+    display: grid;
+    grid-row-gap: 2rem;
+
+     @media screen and (min-width:768px){
+        max-width: 75vw;
+     }
+}
+
+.grid-container--medium-2{
+    @media screen and (min-width:768px){
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 4rem;
+    }
+}
+
+.section-title{
+    padding: 1rem 0.5rem;    
+}
+
+.section-title__name{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-family: 'Cookie',cursive;
+}
+
+.section-title__underline{
+    background: var(--yellow);
+    width: 6rem;
+    height:0.25rem;
+}
+.section-title__text{
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+    color: var(--grey);
+}

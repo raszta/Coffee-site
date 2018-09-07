@@ -34,12 +34,22 @@
         display:block;
         border: 0.1rem solid  var(--black);
         border-radius: 50%;
-        padding:1rem;
+        padding:0.25rem;
         text-decoration:none;
         color: var(--black);
         transition: all 0.5s linear;
         margin: 1rem;
-        font-size: 2rem;
+        font-size: 1rem;
+        @media screen and(min-width:768px){
+            font-size: 2rem;
+            margin: 1rem;
+             padding:1rem;
+    }
+    @media screen and(min-width:1024px){            
+            font-size: 2.5rem;
+            margin: 1rem;
+             padding:1rem;
+        }
     }
    
      .banner__social-icon:hover{
@@ -76,6 +86,7 @@
          font-size: 4rem;
          color: var(--brightYellow);
          cursor: pointer;
+         z-index: 999;
      }
      .navBtn:hover{
          animation: pulse 2s infinite;         

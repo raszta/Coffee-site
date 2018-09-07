@@ -1,0 +1,22 @@
+.about-container{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr;
+     @media screen and (min-width:768px){
+              grid-template-rows: 1fr 1fr;
+         }      
+
+    .about-img--special{
+     @media screen and (min-width:768px){
+              order: -1;
+         }               
+     }
+
+    .about__img-item{
+        height: 100%;
+        border-radius: 0.25rem;
+        width: 100%;
+        display:block;         
+    }
+}
