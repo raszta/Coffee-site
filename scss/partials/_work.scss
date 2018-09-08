@@ -1,32 +1,30 @@
 .work{
     .work-container{
         max-width: 90vw;
-        margin: 2rem auto;        
+        margin: 1rem auto;        
         
-        @media screen and(min-width:576px){     
-            display:flex;
-            flex-direction: row;
-            flex-wrap: wrap;
+        @media screen and(min-width:576px){ 
+
         }
         @media screen and(min-width:992px){
-            display:grid;
-            height: 100vh;
-            grid-template-columns: repeat(4,1fr);
-            grid-template-rows: repeat(4,1fr);
-           
-            grid-template-areas: 
-            "one one two three"
-            "one one four four"
-            "five six seven seven"
-            "eight nine seven seven";
+        display:grid;
+        height: 100vh;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,1fr);
+        grid-gap: 1rem;
+        
+        grid-template-areas: 
+        "one one two three"
+        "one one four four"
+        "five six seven seven"
+        "eight nine seven seven";
         }
     }
     .work-item{
         background: linear-gradient(var(--yellow),var(--yellow));
         overflow: hidden;
         position: relative;
-        flex-basis: 42%;
-        margin:1rem;
+        flex-basis: 45%;  
     }
     
     .item-1{
@@ -62,7 +60,7 @@
         height: 100%;
         display:block;   
         transition: all 1s linear;
-        opacity:1;    
+        opacity:1;  
     }
 
     .work-item:hover .work-item__img{
@@ -97,7 +95,7 @@
       .work-modal--show{
           position:fixed;
           z-index: 9999;
-          background: rgba(0,0,0,0.5);
+          background: rgba(0,0,0,0.5) center/cover no-repeat;
           top: 0;
           left: 0;
           right: 0;
@@ -108,7 +106,7 @@
       }
 
       .work-modal__item{
-        background: url(../../img/work-1.jpeg) center/cover;
+        background: center/cover;
         height: 70vh;
         width: 80vw;
         border:0.5rem solid var(--yellow);

@@ -66,12 +66,12 @@
      .drink-card__list{
          display:grid;
          grid-template-columns: 100%;
-         grid-row-gap: 2rem;
+         grid-row-gap: 1rem;
 
-         @media screen and (min-width:768px){       
+        @media screen and (min-width:768px){       
         grid-template-columns: 1fr 1fr;
-        grid-gap:1rem;       
-    }
+        grid-gap:2rem;       
+        }
      }
 
      .person{
@@ -79,12 +79,25 @@
           grid-template-columns: auto auto 1fr;
           align-items: center;
           text-align: left;
-          grid-gap:1rem;
+          grid-gap:0.5rem;
           border:0.1rem solid rgba(111,87,77,0.6);
-          padding: 1rem;
+          padding: 0.25rem;
           border-radius: 0.5rem;
-          font-size: 1.5rem;
+          font-size: 0.6rem;
+
+        @media screen and (min-width:400px){       
+            font-size: 0.85rem; 
+            padding: 0.5rem;  
+            grid-gap:1rem;    
+        }
+
+        @media screen and (min-width:768px){       
+        font-size: 1.25rem;
+        padding: 1rem;  
+        grid-gap:1.25rem;     
+        }
      }
+
      .person__image{
         border-radius: 50%;
      }

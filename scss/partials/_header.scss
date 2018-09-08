@@ -1,13 +1,13 @@
 .header{
-    height: 100vh;
+    height: 100vh;    
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-   font-family: 'Cookie', cursive;
+    font-family: 'Cookie', cursive;
 
     @media screen and(max-width:767px){
-        background: url('../../img/headerBcg.jpeg') center/cover fixed no-repeat;       
+        background: url('../../img/headerBcg.jpeg') center/cover fixed no-repeat;      
     }
 
     .banner{
@@ -16,19 +16,23 @@
     
     .banner__title{
         text-transform: capitalize;
-        font-size: 4rem;
+        font-size: 2.5rem;
         color: var(--yellow);
-         margin-bottom: 2rem;
-
+         margin-bottom: 1rem;
+        @media screen and(min-width:500px){
+            font-size: 4rem;
+            margin-bottom: 2rem;
+         }
         @media screen and(min-width:768px){
             font-size: 6rem;
             margin-bottom: 2rem;
-    }
+         }
         @media screen and(min-width:1024px){            
             font-size: 9rem;
              margin-bottom: 2rem;
         }
     }
+
     .banner__social-icon{
         flex-basis: 20%;
         display:block;
@@ -38,14 +42,20 @@
         text-decoration:none;
         color: var(--black);
         transition: all 0.5s linear;
-        margin: 1rem;
-        font-size: 1rem;
+        margin: 0.25rem;
+        font-size: 0.75rem;
+
+        @media screen and(min-width:500px){
+            font-size: 1.5rem;
+            margin: 1rem;
+            padding:1rem;
+        }
         @media screen and(min-width:768px){
             font-size: 2rem;
             margin: 1rem;
-             padding:1rem;
-    }
-    @media screen and(min-width:1024px){            
+            padding:1rem;
+        }
+        @media screen and(min-width:1024px){            
             font-size: 2.5rem;
             margin: 1rem;
              padding:1rem;
@@ -55,6 +65,7 @@
      .banner__social-icon:hover{
          background: var(--brightYellow);
      }
+
      .banner__icons{
          display: flex;
         //  display: grid;
@@ -65,14 +76,19 @@
         justify-content: center;
      }
      }
+
      .video__container{
          position: absolute;
          height: 100%;
          width: 100%;
          top: 0;
-         left:0;
-         z-index: -1;
+         left:0;        
+
+        @media screen and(max-width:767px){
+        display: none;
+        }
      }
+
      .video__item{
         width: 100%;
         height: 100%;
@@ -83,35 +99,44 @@
          position:fixed;
          top:5%;
          right:5%;
-         font-size: 4rem;
+         font-size: 2.5rem;
          color: var(--brightYellow);
          cursor: pointer;
-         z-index: 999;
-     }
-     .navBtn:hover{
-         animation: pulse 2s infinite;         
+         z-index: 9999;
 
+        @media screen and(min-width:500px){
+        font-size: 4rem;           
+        }
      }
+
+     .navBtn:hover{
+        animation: pulse 2s infinite;
+     }
+
      .nav{
-         position:fixed;
-         top: 0;
-         left: 0;
-         height: 100%;
-         width: 0;
-         transition: all 0.5s linear;
-         overflow: hidden;
-         background: linear-gradient(to right, rgba(173, 129, 57, 0.8), rgba(242,180,80,0.8), rgba(255, 200, 111, 0.8));
-         z-index: 3;
-         
+        position:fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        transition: all 0.5s linear;
+        overflow: hidden;
+        background: linear-gradient(to right, rgba(173, 129, 57, 0.8), rgba(242,180,80,0.8), rgba(255, 200, 111, 0.8));
+        z-index: 3;         
      }
 
      .nav--show{
-         width:10rem;
+        width:5rem;
+
+        @media screen and(min-width:500px){
+        width:10rem;        
+        }
      }
 
      .nav__links{
-         list-style: none;
+        list-style: none;
      }
+
      .nav__single-link{
         text-decoration: none;
         color:var(--black);
@@ -121,31 +146,33 @@
         padding: 0.5rem 1rem;
         transition: all 1s ease-in-out;
      }
-      .nav__single-link:hover{
-          padding-left: 1.5rem;
-          background:var(--brown);
-          color: rgba(242,180,80,0.8);
-      }
-      .nav__logo:hover{
-          background:var(--grey);
-      }
 
-      .video__switch-container{
-          display:none;
+    .nav__single-link:hover{
+        padding-left: 1.5rem;
+        background:var(--brown);
+        color: rgba(242,180,80,0.8);
+    }
 
-          @media screen and(min-width:768px){
-              height: 2,5rem;
-              display:block;
-              position: absolute;
-              bottom: 5%;
-              right: 5%;
-              z-index: 3;
-          }
-      }
+    .nav__logo:hover{
+        background:var(--grey);
+    }
 
-      .video__switch{
-          @media screen and(min-width:768px){
-              height: 100%;
+    .video__switch-container{
+        display:none;
+
+        @media screen and(min-width:768px){
+        height: 2,5rem;
+        display:block;
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        z-index: 3;
+        }
+    }
+
+    .video__switch{
+        @media screen and(min-width:768px){
+        height: 100%;
         position:relative;
         width: 5rem;
         background: var(--yellow);
@@ -155,7 +182,7 @@
         padding: 0.25rem;
         cursor: pointer;
         border-radius: 0.5rem;
-      }
+       }
     }
 
     .video__switch-btn{

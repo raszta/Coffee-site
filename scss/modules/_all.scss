@@ -26,14 +26,14 @@ body{
 }
 
 .grid-container{
-    max-width: 90vw;
-    margin:2rem auto;
+    max-width: 75vw;
+    margin:1rem auto;
     display: grid;
-    grid-row-gap: 2rem;
+    grid-gap: 1rem;
 
-     @media screen and (min-width:768px){
-        max-width: 75vw;
-     }
+    @media screen and (min-width:768px){
+    max-width: 90vw;
+    }
 }
 
 .grid-container--medium-2{
